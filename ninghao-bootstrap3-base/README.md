@@ -40,12 +40,107 @@
 
 ### 使用网格系统-Grid-system
 
+<!-- TODO: 画出线状图出来理解、查一下有什么线状图工具 -->
+
+`*` 代表的是占用的网格数量，Bootstrap 中一行的网格数量是 12 个。
+
+Bootstrap 是移动设备优先的，因此在设置 `col-xs-*` 的样式的时候是没有使用媒体查询的，而是直接写样式的，其它的都是通过设置相应宽度的媒体查询实现 `@media (min-width: *) {}`。
+
 - col-xs-*
 
-    xs即extra small，是为手机准备的网格类，也就是在窗口 `< 768px` 的时候应用的样式。
+    xs即extra small，是为手机准备的网格类，也就是在视口 `< 768px` 的时候应用的样式。
 
 - col-sm-*
 
-    sm即small，用在小尺寸屏幕上，比如说平板电脑，在窗口 `>= 768px` 的时候应用的样式。
+    sm即small，用在小尺寸屏幕上，比如说平板电脑，在视口 `>= 768px` 的时候应用的样式。
 
-- 
+- col-md-*
+
+    md即middle，用在中等设备上，在视口 `>= 992px` 的时候应用的样式。
+
+- col-lg-*
+
+    lg即large，用在大尺寸设备上，在视口 `>= 1200` 的时候应用的样式。
+
+### 让页面居中显示的容器－.container
+
+通过为元素多添加一个带有 `class="container"` 的父元素，就可以实现让页面居中显示。
+
+`.container` 的具体样式规则如下:
+
+```css
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+```
+
+从上面的样式就可以看出来，是通过 `css` 样式层叠特性 & `media` 来实现在不同屏幕尺寸上使用不同的宽度。
+
+上面的样式规则中，先针对移动设备设置默认的样式规则，然后再通过使用媒体查询来根据屏幕不断增大的情况来设置样式，可以看出来采用了移动设备优先的思想。
+
+### 网格类 & 混合使用网格类
+
+网格类Bootstrap样式规则源码
+
+使用一个类——`.col-xs-6`
+
+```css
+.col-xs-6 {
+    width: 50%;
+}
+
+.col-xs-6 {
+    float: left;
+}
+```
+
+混合使用网格类Bootstrap样式规则源码
+
+使用类——`.col-xs-6.col-sm-8`
+
+```css
+.col-xs-6 {
+    width: 50%;
+}
+
+.col-xs-6 {
+    float: left;
+}
+
+.col-sm-8 {
+    width: 66.66666667%;
+}
+
+.col-sm-8 {
+    float: left;
+}
+```
+
+其实混合使用网格类布局的核心原则是——权重相同的样式规则，位置越靠后的覆盖位置靠前的。
+
+### 内容列的顺序－push与pull
+
+在不改变代码结构的情况下，改变元素的左右显示位置。使用这个样式的目的是便于SEO搜索优化。
+
+`push` 是向右推，`pull` 是向左拉。
