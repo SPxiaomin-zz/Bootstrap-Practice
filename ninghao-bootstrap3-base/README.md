@@ -3,6 +3,7 @@
 ## 导航
 
 - [准备](#准备)
+- [布局](#布局)
 
 ## 准备
 
@@ -147,6 +148,8 @@ Bootstrap 是移动设备优先的，因此在设置 `col-xs-*` 的样式的时�
 
 Bootstrap 使用的是以下方式实现效果 `position: relative;` & push `left: *%` & pull `right: *%`
 
+<!-- TODO: left 的百分比值也是相对父元素的宽度计算吗 -->
+
 ### 嵌套的布局-nesting
 
 嵌套布局简单来说，就是在 `.col-*-*` 中嵌套 `.col-*-*`，但是要注意将嵌套的 `.col-*-*` 包裹一层 `.row`。
@@ -170,3 +173,9 @@ Bootstrap 使用的是以下方式实现效果 `position: relative;` & push `lef
 使用 `.col-(xs|sm|md|lg)-offset-[1-12]` 对元素进行水平方向的偏移。
 
 Bootstrap 实现的方式是借助 `margin-left` 进行偏移的，这里其实是借助了 `margin` 的百分比值是相对于宽度计算的特性。
+
+### 隐藏与显示的响应式工具类
+
+`visible-(xs|sm|md|lg)` 表示分别在不同尺寸的设备上进行显示。
+
+`hidden-(xs|sm|md|lg)` 表示分别在不同尺寸的设备上进行隐藏。

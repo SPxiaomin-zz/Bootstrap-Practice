@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<!-- <body>
+<body>
     <!-- 让页面居中显示的容器-.container -->
     <!-- <div class="container">
         <h1 class="page-header">主体</h1>
@@ -142,7 +142,91 @@
     </div> -->
     <!-- /嵌套的布局-nesting -->
 
+    <!-- 偏移的空间-offset -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>主体</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi ducimus pariatur eaque sint, vero officiis obcaecati, accusamus, eveniet perferendis quam voluptates eius, dolorem vitae maiores quae rem suscipit quisquam!</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>区块一</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vel adipisci itaque officia, eveniet voluptas quam at esse odio ipsa porro, eius nisi nobis nihil corrupti molestias velit, optio quo.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>区块二</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dolore, maxime fugit, libero aperiam sapiente fuga nesciunt, velit quo qui pariatur quos dolorem eligendi, quidem. Architecto ratione officia facere aperiam?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>区块三</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium labore, sunt alias laboriosam ut animi voluptatem doloremque. Voluptatibus hic eos in rem debitis quia a excepturi, adipisci saepe atque quod?</p>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-6 col-md-offset-6">
+                        <h2>区块四</h2>
+                        <p class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsum blanditiis quibusdam optio voluptates enim, non fugit cupiditate! Eius fugit laboriosam voluptas quam, libero delectus itaque, voluptatibus perferendis consequuntur iusto.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>区块五</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, praesentium harum voluptatum quae. Dicta aliquam, ipsam in illum corporis iure, rerum ullam animi neque provident aspernatur aut, temporibus quis suscipit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h1>边栏</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi esse dolor at quod, veniam sunt, quo dicta, repellat doloremque similique culpa, aliquid! Enim eligendi temporibus fuga vero quas maxime provident?</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- /偏移的空间-offset -->
+
+    <!-- 隐藏与显示的响应式工具类 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>主体</h1>
+                <p class="visible-md-inline alert alert-info">我们有支持 IOS 平台的 App，点击下载！</p>
+                <p class="visible-md-inline-block alert alert-info">我们有支持 IOS 平台的 App，点击下载！</p>
+                <p class="visible-md-block alert alert-info">我们有支持 IOS 平台的 App，点击下载！</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam culpa, sequi reprehenderit mollitia quas maiores officiis, odit quod, minus aliquam eum impedit hic nostrum velit. Temporibus, quam aliquid sit!</p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>区块一</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quibusdam voluptates nam pariatur repellat officia modi atque inventore vitae fuga at ipsa ad sequi saepe temporibus necessitatibus asperiores vero velit!</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>区块二</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ea veritatis enim, rerum unde, natus vero sunt laborum, maiores porro itaque aut cum cumque. Earum reprehenderit, libero nostrum voluptate necessitatibus.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>区块三</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quae sit dolore iste cumque, molestias odio, facilis aperiam iusto recusandae reprehenderit pariatur excepturi quo porro tempora similique, veniam, quos. Possimus.</p>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-6">
+                        <h2>区块四</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae cumque molestias, officiis veniam. Consequatur maxime quas tempore eum, ea harum odit cum veritatis repudiandae, et excepturi nihil ducimus unde totam.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>区块五</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo itaque ex unde dolore officiis vitae veniam ab voluptates natus placeat. Laboriosam nam quidem, repellat similique dignissimos, consequatur quisquam doloribus ducimus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-xs">
+                <h1>边栏</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis doloribus nesciunt accusantium explicabo tempore optio asperiores praesentium. Temporibus dolor, laudantium iste perspiciatis expedita quasi, impedit eaque, quis deleniti optio distinctio.</p>
+            </div>
+        </div>
+    </div>
+    <!-- /隐藏与显示的响应式工具类 -->
+
     <script src="lib/jquery-3.1.1.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
